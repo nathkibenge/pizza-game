@@ -68,20 +68,3 @@ typedef struct {
 	Entity entityHead, *entityTail;
 	int pizzaTotal, pizzaFound;
 } Stage;
-
-typedef struct Medal Medal;
-
-struct Medal {
-	char id[MAX_NAME_LENGTH];
-	char title[MAX_NAME_LENGTH];
-	char description[MAX_DESCRIPTION_LENGTH];
-	int type;
-	int notify;
-	int hidden;
-	unsigned long awardDate;
-	Medal* next;
-};
-typedef struct {
-	int stats[STAT_MAX];
-	Medal* medalsHead;
-} Game;

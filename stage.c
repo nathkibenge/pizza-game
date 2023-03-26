@@ -38,9 +38,6 @@ void initStage(void)
 	initPlayer();
 
 	initMap();
-	app.delegate.logic = logic;
-
-	app.delegate.draw = draw;
 }
 
 static void logic(void)
@@ -79,5 +76,4 @@ static void drawHud(void)
 	SDL_SetRenderDrawBlendMode(app.renderer, SDL_BLENDMODE_NONE);
 
 	drawText(SCREEN_WIDTH - 5, 5, 255, 255, 255, TEXT_RIGHT, "PIZZA %d/%d", stage.pizzaFound, stage.pizzaTotal);
-	drawText(SCREEN_WIDTH -40, 40, 255, 255, 255, TEXT_RIGHT, "USE W,A,D OR ARROW KEYS TO NAVIAGATE :)");
 }

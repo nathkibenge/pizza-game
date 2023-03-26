@@ -60,10 +60,6 @@ void initGame(void)
 	initSounds();
 
 	loadMusic("music/one_0.mp3");
-	
-	initGame();
-
-	initMedals();
 
 	playMusic(1);
 }

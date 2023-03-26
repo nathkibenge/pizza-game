@@ -56,31 +56,13 @@ static void touch(Entity *other)
 {
 	if (self->health > 0 && other == player)
 	{
-		game.stats[STAT_PIZZA_COLLECTED]++;
 		self->health = 0;
 
 		stage.pizzaFound++;
 
-		if (game.stats[STAT_PIZZA_COLLECTED] == 1)
-		{
-			awardMedal("Bronze Award");
-		}
-		else if (game.stats[STAT_PIZZA_COLLECTED] ==3)
-		{
-			awardMedal("Silver Award");
-		}
-		else if (game.stats[STAT_PIZZA_COLLECTED] == 7)
-		{
-			awardMedal("Gold Award");
-		}
-		else if (game.stats[STAT_PIZZA_COLLECTED] == 11)
-		{
-			awardMedal("PizzaAll");
-		}
 		if (stage.pizzaFound == stage.pizzaTotal)
 		{
 			playSound(SND_PIZZA_DONE, CH_PIZZA);
-			sleep(30);
 			exit(1);
 		}
 		else

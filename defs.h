@@ -54,7 +54,6 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #define GLYPH_WIDTH  18
 #define GLYPH_HEIGHT 29
 
-#define MAX_DESCRIPTION_LENGTH 50
 enum
 {
 	TEXT_LEFT,
@@ -74,20 +73,4 @@ enum
 {
 	CH_PLAYER,
 	CH_PIZZA
-};
-
-enum {
-	MEDAL_BRONZE,
-	MEDAL_SILVER,
-	MEDAL_GOLD,
-	MEDAL_RUBY,
-	MEDAL_MAX
-};
-
-enum {
-	SND_MEDAL,
-};
-enum {
-	STAT_PIZZA_COLLECTED,
-	STAT_MAX
 };
